@@ -136,7 +136,7 @@ class Screen(dict, GUISkin):
 		self.instance.show()
 		for x in self.onShow:
 			x()
-		for val in self.values() + self.renderer:
+		for val in list(self.values()) + self.renderer:
 			if isinstance(val, GUIComponent) or isinstance(val, Source):
 				val.onShow()
 
@@ -147,7 +147,7 @@ class Screen(dict, GUISkin):
 		self.instance.hide()
 		for x in self.onHide:
 			x()
-		for val in self.values() + self.renderer:
+		for val in list(self.values()) + self.renderer:
 			if isinstance(val, GUIComponent) or isinstance(val, Source):
 				val.onHide()
 
