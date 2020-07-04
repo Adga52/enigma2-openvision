@@ -501,12 +501,12 @@ class CaidInfo2(Poll, Converter, object):
 
 			if ecm:
 				for line in ecm:
-					x = line.lower().find("msec")
+					x = line.lower().find(b"msec")
 					#ecm time for mgcamd and oscam
 					if x != -1:
 						info["ecm time"] = line[0:x+4]
 					else:
-						item = line.split(":", 1)
+						item = line.split(b":", 1)
 						if len(item) > 1:
 							#wicard block
 							if item[0] == "Provider":
