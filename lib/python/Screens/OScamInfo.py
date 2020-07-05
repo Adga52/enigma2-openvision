@@ -17,7 +17,7 @@ from xml.etree import ElementTree
 from operator import itemgetter
 from Components.SystemInfo import SystemInfo
 import os, time
-import urllib2
+import urllib
 import skin
 
 ###global
