@@ -13,7 +13,7 @@ def ChoiceEntryComponent(key = None, text = ["--"]):
 		res.append((eListboxPythonMultiContent.TYPE_TEXT, x, y, w, h, 0, RT_HALIGN_LEFT, "-"*200))
 	else:
 		if key:
-			x, y, w, h = skin.parameters.get("ChoicelistName",(45, 0, 800, 25))
+			x, y, w, h = (68, 3, 1000, 32)
 			res.append((eListboxPythonMultiContent.TYPE_TEXT, x, y, w, h, 0, RT_HALIGN_LEFT, text[0]))
 			if key == "dummy":
 				png = None
